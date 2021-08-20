@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "lib": ["es2020", "dom"],
+    "moduleResolution": "Node",
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true
+  }
+}
