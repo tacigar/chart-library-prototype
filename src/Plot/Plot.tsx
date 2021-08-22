@@ -1,5 +1,5 @@
 import * as d3Scale from 'd3-scale';
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
 import { LineSeries } from '../LineSeries';
 import { PlotContextProvider } from '../PlotContext';
 import { PlotData } from '../types';

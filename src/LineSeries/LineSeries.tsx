@@ -5,10 +5,18 @@ import { PlotData } from '../types';
 
 export interface LineSeriesProps {
   data: PlotData;
+  stroke?: string;
+  strokeWidth?: number;
+  strokeDasharray?: string;
 }
 
-export const LineSeries: React.FC<LineSeriesProps> = ({ data }) => {
-  const { xScale, yScale } = usePlotContext();
+export const LineSeries: React.FC<LineSeriesProps> = ({
+  data,
+  strokeWidth = 1,
+  stroke = '#acacac',
+  strokeDasharray,
+}) => {
+  const { xScale, yScale, margin } = usePlotContext();
 
   const d = useMemo(() => {
     if (!xScale || !yScale) {
@@ -22,5 +30,14 @@ export const LineSeries: React.FC<LineSeriesProps> = ({ data }) => {
     );
   }, [data, xScale, yScale]);
 
-  return <path d={d} strokeWidth="1px" fill="none" stroke="black" />;
+  return (
+    <path
+      d={d}
+      transform={`translate(${margin.left},${margin.top})`}
+      strokeWidth={strokeWidth}
+      fill="none"
+      stroke={stroke}
+      strokeDasharray={strokeDasharray}
+    />
+  );
 };
