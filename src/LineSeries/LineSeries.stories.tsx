@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import { Plot } from '../Plot';
+import { XAxis } from '../XAxis';
 import { LineSeries } from './LineSeries';
 
 storiesOf('LineSeries', module).add('LineSeries', () => (
@@ -11,12 +12,6 @@ storiesOf('LineSeries', module).add('LineSeries', () => (
         { x: 30, y: 50 },
       ]}
     />
-    <LineSeries
-      data={[
-        { x: 10, y: 40 },
-        { x: 20, y: 90 },
-        { x: 30, y: 100 },
-      ]}
-    />
+    <XAxis />
   </Plot>
 ));

@@ -19,7 +19,7 @@ export interface PlotProps {
 export const Plot: React.FC<PlotProps> = ({
   width,
   height,
-  margin = { top: 20, bottom: 5, right: 5, left: 20 },
+  margin = { top: 5, bottom: 20, right: 10, left: 20 },
   children,
 }) => {
   const chartWidth = width - (margin.right + margin.left);
