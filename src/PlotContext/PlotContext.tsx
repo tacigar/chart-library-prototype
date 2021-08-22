@@ -1,3 +1,4 @@
+import * as d3Scale from 'd3-scale';
 import React, { useContext } from 'react';
 
 export interface PlotContextType {
@@ -9,11 +10,13 @@ export interface PlotContextType {
     right: number;
     left: number;
   };
+  chartWidth: number;
+  chartHeight: number;
+  xScale?: d3Scale.ScaleLinear<number, number, never>;
+  yScale?: d3Scale.ScaleLinear<number, number, never>;
 }
 
-export const PlotContext = React.createContext<PlotContextType | undefined>(
-  undefined
-);
+export const PlotContext = React.createContext<PlotContextType | undefined>(undefined);
 
 export const usePlotContext = () => {
   const ctx = useContext(PlotContext);
