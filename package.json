@@ -1,7 +1,7 @@
 {
-  "name": "@dodomeki/chart",
+  "name": "chart-library-prototype",
   "version": "0.0.1",
-  "description": "Dodomeki Chart Library",
+  "description": "Chart Library Prototype",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
