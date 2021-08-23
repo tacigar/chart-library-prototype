@@ -3,6 +3,7 @@ import React from 'react';
 import { AreaSeries } from '../AreaSeries/AreaSeries';
 import { LineSeries } from '../LineSeries';
 import { PlotContextProvider } from '../PlotContext';
+import { ScatterSeries } from '../ScatterSeries';
 import { PlotData } from '../types';
 
 export interface PlotProps {
@@ -32,7 +33,7 @@ export const Plot: React.FC<PlotProps> = ({
   let maxY = Number.MIN_VALUE;
 
   children.forEach((child) => {
-    if (child.type === LineSeries || child.type === AreaSeries) {
+    if (child.type === LineSeries || child.type === AreaSeries || child.type === ScatterSeries) {
       const data: PlotData = child.props.data;
       data.forEach(({ x, y }) => {
         minX = Math.min(minX, x);
