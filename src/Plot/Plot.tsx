@@ -1,5 +1,6 @@
 import * as d3Scale from 'd3-scale';
 import React from 'react';
+import { AreaSeries } from '../AreaSeries/AreaSeries';
 import { LineSeries } from '../LineSeries';
 import { PlotContextProvider } from '../PlotContext';
 import { PlotData } from '../types';
@@ -31,7 +32,7 @@ export const Plot: React.FC<PlotProps> = ({
   let maxY = Number.MIN_VALUE;
 
   children.forEach((child) => {
-    if (child.type === LineSeries) {
+    if (child.type === LineSeries || child.type === AreaSeries) {
       const data: PlotData = child.props.data;
       data.forEach(({ x, y }) => {
         minX = Math.min(minX, x);
