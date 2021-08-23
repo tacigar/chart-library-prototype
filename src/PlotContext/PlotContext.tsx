@@ -1,7 +1,9 @@
 import * as d3Scale from 'd3-scale';
 import React, { useContext } from 'react';
+import { PlotData } from '../types';
 
 export interface PlotContextType {
+  allData: PlotData[];
   width: number;
   height: number;
   margin: {

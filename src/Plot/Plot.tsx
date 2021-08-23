@@ -32,6 +32,8 @@ export const Plot: React.FC<PlotProps> = ({
   let maxX = Number.MIN_VALUE;
   let maxY = Number.MIN_VALUE;
 
+  const allData: PlotData[] = [];
+
   children.forEach((child) => {
     if (child.type === LineSeries || child.type === AreaSeries || child.type === ScatterSeries) {
       const data: PlotData = child.props.data;
@@ -41,6 +43,7 @@ export const Plot: React.FC<PlotProps> = ({
         maxX = Math.max(maxX, x);
         maxY = Math.max(maxY, y);
       });
+      allData.push(data);
     }
   });
 
@@ -50,6 +53,7 @@ export const Plot: React.FC<PlotProps> = ({
   return (
     <PlotContextProvider
       value={{
+        allData,
         width,
         height,
         margin,
