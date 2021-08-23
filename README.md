@@ -45,3 +45,5 @@ const Example = () => {
   );
 };
 ```
+
+![Screenshot](/screenshots/screenshot.png?raw=true 'Screenshot')
