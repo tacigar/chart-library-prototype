@@ -1,5 +1,7 @@
 # Chart Library Prototype
 
+![Screenshot](/screenshots/example.gif?raw=true 'Screenshot')
+
 ## Usage
 
 ```typescript
@@ -41,9 +43,8 @@ const Example = () => {
       />
       <XAxis />
       <YAxis />
+      <CrossHair />
     </Plot>
   );
 };
 ```
-
-![Screenshot](/screenshots/screenshot.png?raw=true 'Screenshot')
