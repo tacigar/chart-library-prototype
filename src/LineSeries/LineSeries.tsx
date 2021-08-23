@@ -13,7 +13,7 @@ export interface LineSeriesProps {
 export const LineSeries: React.FC<LineSeriesProps> = ({
   data,
   strokeWidth = 1,
-  stroke = '#acacac',
+  stroke = '#456789',
   strokeDasharray,
 }) => {
   const { xScale, yScale, margin } = usePlotContext();
